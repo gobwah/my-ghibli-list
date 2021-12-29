@@ -1,8 +1,13 @@
+import FilmList from '../components/FilmList'
+import Footer from '../components/Footer'
+import Header from '../components/Header'
+
 function Home() {
   return (
     <div>
-      <h1>MyGhibliList</h1>
-      <p>Hello World!</p>
+      <Header />
+      <FilmList />
+      <Footer />
     </div>
   )
 }
