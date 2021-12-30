@@ -21,7 +21,7 @@ function FooterLinkList() {
     <Container>
       {links &&
         links.map((link) => (
-          <Link>
+          <Link key={link.id}>
             <a
               href={link.href}
               title={link.title}

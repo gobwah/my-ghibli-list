@@ -1,0 +1,58 @@
+import colors from '../utils/colors'
+
+const { default: styled } = require('styled-components')
+
+const Card = styled.article`
+  width: 13rem;
+  height: 20rem;
+  background-image: ${(props) => `url(${props.img})`};
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 105%;
+  transition: background-size 500ms;
+
+  &:hover h2 {
+    opacity: 1;
+  }
+
+  &:hover {
+    background-size: 150%;
+  }
+`
+
+const Title = styled.h2`
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: ${colors.applyAlpha(colors.secondary, 0.8)};
+  transition: opacity 500ms;
+`
+
+const Content = styled.span`
+  background-color: transparent;
+  font-size: 8rem;
+  color: ${colors.primary};
+  cursor: default;
+  user-select: none;
+`
+
+function FilmCard({ title, image }) {
+  return (
+    <Card img={image}>
+      <Title title={title}>
+        <Content>+</Content>
+      </Title>
+    </Card>
+  )
+}
+
+export default FilmCard
