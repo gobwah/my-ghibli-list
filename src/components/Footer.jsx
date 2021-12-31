@@ -8,25 +8,24 @@ const FooterContainer = styled.footer`
   width: 100%;
   display: flex;
   justify-content: space-between;
+  height: 10vh;
+  align-items: center;
 `
 
-const FooterLeft = styled.p`
-  padding: 0 10px;
+const FooterLeft = styled.a`
+  margin: 0 10px;
 `
 
 function Footer() {
   return (
     <FooterContainer>
       <FooterLinkList />
-      <FooterLeft>
-        Powered by{' '}
-        <a
-          href="https://ghibliapi.herokuapp.com/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Ghibli API
-        </a>
+      <FooterLeft
+        href="https://ghibliapi.herokuapp.com/"
+        target="_blank"
+        rel="noreferrer"
+      >
+        Ghibli API
       </FooterLeft>
     </FooterContainer>
   )

@@ -23,6 +23,9 @@ const LoaderElt = styled.div`
 const LoaderWrapper = styled.div`
   display: flex;
   justify-content: center;
+  align-items: center;
+  margin: auto;
+  min-height: 80vh;
 `
 
 function Loader() {

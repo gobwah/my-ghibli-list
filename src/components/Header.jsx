@@ -8,13 +8,13 @@ const Container = styled.header`
   top: 0;
   width: 100%;
   z-index: 100;
-  padding: 10px 0;
   display: flex;
   justify-content: flex-start;
   @media (max-width: 600px) {
     justify-content: center;
   }
   align-items: center;
+  height: 10vh;
 `
 
 const CustomLink = styled(Link)`
