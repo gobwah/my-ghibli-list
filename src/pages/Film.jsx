@@ -27,10 +27,10 @@ const TitleBackground = styled.div`
   }
   background-repeat: no-repeat;
   background-position: center;
-  filter: blur(5px) opacity(90%) grayscale(50%);
+  filter: blur(10px) opacity(90%) grayscale(50%);
   height: ${HEIGHT + UNIT};
-  width: 100vw;
-  margin: ${MARGIN + UNIT} 0;
+  width: 99vw;
+  margin: ${MARGIN + UNIT} auto;
 `
 
 const Title = styled.h2`
