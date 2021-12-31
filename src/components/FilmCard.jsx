@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import colors from '../utils/colors'
 
 const { default: styled } = require('styled-components')
@@ -11,7 +12,7 @@ const Card = styled.article`
   background-size: 105%;
   transition: background-size 500ms;
 
-  &:hover h2 {
+  &:hover a {
     opacity: 1;
   }
 
@@ -20,7 +21,7 @@ const Card = styled.article`
   }
 `
 
-const Title = styled.h2`
+const LinkWrapper = styled(Link)`
   opacity: 0;
   width: 100%;
   height: 100%;
@@ -35,22 +36,23 @@ const Title = styled.h2`
   align-items: center;
   background-color: ${colors.applyAlpha(colors.secondary, 0.8)};
   transition: opacity 500ms;
+  text-decoration: none;
 `
 
 const Content = styled.span`
   background-color: transparent;
   font-size: 8rem;
   color: ${colors.primary};
-  cursor: default;
+  cursor: pointer;
   user-select: none;
 `
 
-function FilmCard({ title, image }) {
+function FilmCard({ id, title, image }) {
   return (
     <Card img={image}>
-      <Title title={title}>
+      <LinkWrapper title={title} to={`/film/${id}`}>
         <Content>+</Content>
-      </Title>
+      </LinkWrapper>
     </Card>
   )
 }

@@ -5,6 +5,7 @@ const Container = styled.footer`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 5px;
 `
 
 const Link = styled.p`

@@ -12,8 +12,15 @@ export function useFetch(url) {
     async function fetchData() {
       try {
         const response = await fetch(url)
-        const data = await response.json()
-        setData(data)
+        switch (response.status) {
+          case 400:
+          case 404:
+            throw new Error(response.statusText)
+
+          default:
+            const data = await response.json()
+            setData(data)
+        }
       } catch (err) {
         console.log(err)
         setError(true)
