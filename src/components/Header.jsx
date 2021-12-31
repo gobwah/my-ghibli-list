@@ -1,6 +1,7 @@
 import logo from '../assets/logo.png'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
+import colors from '../utils/colors'
 
 const Container = styled.header`
   position: sticky;
@@ -24,6 +25,15 @@ const CustomLink = styled(Link)`
   }
   align-items: center;
   text-decoration: none;
+  &:hover > h1 {
+    @media (min-width: 600px) {
+      text-shadow: ${colors.primary} 0 0 10px;
+    }
+  }
+`
+
+const Title = styled.h1`
+  margin: 0 10px;
 `
 
 function Header() {
@@ -31,7 +41,7 @@ function Header() {
     <Container>
       <CustomLink to="/">
         <img src={logo} alt="logo MyGhibliList" height={50} width={50} />
-        <h1 style={{ margin: '0 10px' }}>MyGhibliList</h1>
+        <Title>MyGhibliList</Title>
       </CustomLink>
     </Container>
   )
