@@ -36,12 +36,14 @@ const Title = styled.h1`
 `
 
 function Header() {
-  const session = window.sessionStorage
   const location = useLocation()
-  const saveScrollPosAtOrigin = (e) => {
-    session.setItem('lastY', 0)
+
+  function saveScrollPosAtOrigin() {
     if (location.pathname === '/') {
-      window.scroll(0, 0)
+      const mainEl = document.getElementById('main')
+      mainEl.scroll(0, 0)
+    } else {
+      window.sessionStorage.setItem('lastY', 0)
     }
   }
 

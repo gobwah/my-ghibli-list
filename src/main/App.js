@@ -45,7 +45,7 @@ function App() {
     <Wrapper>
       <Router className="App">
         <Header />
-        <Main>
+        <Main id="main">
           <Switch>
             <Route exact path="/">
               <Home />

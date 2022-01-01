@@ -48,14 +48,9 @@ const Content = styled.span`
 `
 
 function FilmCard({ id, title, image }) {
-  const session = window.sessionStorage
-  const saveScrollPos = (e) => {
-    session.setItem('lastY', window.scrollY)
-  }
-
   return (
     <Card img={image}>
-      <LinkWrapper title={title} to={`/film/${id}`} onClick={saveScrollPos}>
+      <LinkWrapper title={title} to={`/film/${id}`}>
         <Content>+</Content>
       </LinkWrapper>
     </Card>
