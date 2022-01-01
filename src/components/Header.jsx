@@ -2,6 +2,7 @@ import logo from '../assets/logo.png'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import colors from '../utils/colors'
+import { useLocation } from 'react-router-dom'
 
 const Container = styled.header`
   position: sticky;
@@ -37,9 +38,18 @@ const Title = styled.h1`
 `
 
 function Header() {
+  const session = window.sessionStorage
+  const location = useLocation()
+  const saveScrollPosAtOrigin = (e) => {
+    session.setItem('lastY', 0)
+    if (location.pathname === '/') {
+      window.scroll(0, 0)
+    }
+  }
+
   return (
     <Container>
-      <CustomLink to="/">
+      <CustomLink to="/" onClick={saveScrollPosAtOrigin}>
         <img src={logo} alt="logo MyGhibliList" height={50} width={50} />
         <Title>MyGhibliList</Title>
       </CustomLink>
