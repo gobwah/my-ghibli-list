@@ -9,7 +9,7 @@ const Wrapper = styled.section`
   display: flex;
   flex-flow column;
   justify-content: center;
-  height: 100%;
+  margin-top: 5px;
 `
 const HEIGHT = 25
 const MARGIN = 2.5
@@ -29,7 +29,7 @@ const TitleBackground = styled.div`
   background-position: center;
   filter: blur(10px) opacity(90%) grayscale(50%);
   height: ${HEIGHT + UNIT};
-  width: 99vw;
+  width: 100%;
   margin: ${MARGIN + UNIT} auto;
 `
 
