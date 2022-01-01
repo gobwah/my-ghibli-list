@@ -2,17 +2,11 @@ import styled from 'styled-components'
 import FooterLinkList from './FooterLinkList'
 
 const FooterContainer = styled.footer`
-  position: sticky;
-  bottom: 0;
-  z-index: 100;
-  width: 100%;
+  height: 10vh;
   display: flex;
   justify-content: space-between;
-  height: 10vh;
   align-items: center;
-`
-
-const FooterLeft = styled.a`
+  flex-shrink: 0;
   margin: 0 10px;
 `
 
@@ -20,13 +14,13 @@ function Footer() {
   return (
     <FooterContainer>
       <FooterLinkList />
-      <FooterLeft
+      <a
         href="https://ghibliapi.herokuapp.com/"
         target="_blank"
         rel="noreferrer"
       >
         Ghibli API
-      </FooterLeft>
+      </a>
     </FooterContainer>
   )
 }
