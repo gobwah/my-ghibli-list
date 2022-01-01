@@ -4,11 +4,13 @@ import { getFilmUrl } from '../api/ghibliApi'
 import { useFetch } from '../utils/hooks'
 import Loader from '../components/Loader'
 import Error from '../components/Error'
+import CharacterCard from '../components/CharacterCard'
 
 const Wrapper = styled.section`
   display: flex;
   flex-flow column;
   justify-content: center;
+  align-items: center;
   height: 100%;
 `
 const HEIGHT = 25
@@ -84,6 +86,17 @@ const MetaData = styled.div`
   text-align: center;
 `
 
+const PeopleSection = styled.section`
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  width: 60%;
+  overflow: auto;
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+`
+
 function Film() {
   const { filmId } = useParams()
   const { isLoading, error, data } = useFetch(getFilmUrl(filmId))
@@ -134,6 +147,11 @@ function Film() {
           </MetaData>
         </About>
       </Decription>
+      <PeopleSection>
+        {data.people.map((character, index) => (
+          <CharacterCard key={`character-${index}`} url={character} />
+        ))}
+      </PeopleSection>
     </Wrapper>
   )
 }
