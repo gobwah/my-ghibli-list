@@ -28,10 +28,10 @@ function Film() {
     <Wrapper>
       <FilmTitle data={data} />
       <FilmDescription data={data} />
-      <Section array={data.people} filmId={filmId} type="people" />
-      <Section array={data.species} filmId={filmId} type="species" />
-      <Section array={data.locations} filmId={filmId} type="locations" />
-      <Section array={data.vehicles} filmId={filmId} type="vehicles" />
+      <Section filmId={filmId} type="people" />
+      <Section filmId={filmId} type="species" />
+      <Section filmId={filmId} type="locations" />
+      <Section filmId={filmId} type="vehicles" />
     </Wrapper>
   )
 }

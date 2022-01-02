@@ -1,10 +1,8 @@
 import styled from 'styled-components'
-import neutral from '../../assets/neutral.png'
-import location from '../../assets/location.png'
-import specy from '../../assets/specy.png'
-import vehicle from '../../assets/vehicle.png'
-import { useFetch } from '../../utils/hooks'
-import Loader from '../../components/misc/Loader'
+import neutral from '../../assets/people/neutral.png'
+import location from '../../assets/locations/location.png'
+import specy from '../../assets/species/specy.png'
+import vehicle from '../../assets/vehicles/vehicle.png'
 
 const Card = styled.article`
   display: flex;
@@ -33,45 +31,36 @@ const Image = styled.img`
   }
 `
 
-function CharacterCard({ url, type }) {
-  const { isLoading, error, data } = useFetch(url)
-  let img, alt
+function CharacterCard({ label, type }) {
+  let img
   switch (type) {
     case 'people':
       img = neutral
-      alt = 'People'
       break
 
     case 'species':
       img = specy
-      alt = 'Specy'
       break
 
     case 'locations':
       img = location
-      alt = 'Location'
       break
 
     case 'vehicles':
       img = vehicle
-      alt = 'Vehicle'
       break
 
     default:
-      img = alt = ''
+      img = ''
       break
   }
 
-  return isLoading ? (
-    <Loader />
-  ) : error ? (
-    <Image src={img} alt="Not Found" />
-  ) : data.name ? (
+  return (
     <Card>
-      <Image src={img} alt={alt} />
-      <h2>{data.name}</h2>
+      <Image src={img} alt={type || 'Unknown'} />
+      <h2>{label}</h2>
     </Card>
-  ) : null
+  )
 }
 
 export default CharacterCard

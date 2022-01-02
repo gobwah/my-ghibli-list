@@ -8,8 +8,8 @@ const Wrapper = styled.section`
   width: 80%;
 `
 
-function Section({ filmId, type, array }) {
-  const result = useApiSearch('films', type, filmId, array)
+function Section({ filmId, type }) {
+  const result = useApiSearch('films', type, filmId)
 
   return result.length && result[0] !== url[type].getSimpleAll() ? (
     <Wrapper>
@@ -18,7 +18,7 @@ function Section({ filmId, type, array }) {
       </h3>
       <CardCarousel>
         {result.map((elt, index) => (
-          <Card key={`${type}-${index}`} url={elt} type={type} />
+          <Card key={`${type}-${index}`} type={type} label={elt.name} />
         ))}
       </CardCarousel>
     </Wrapper>

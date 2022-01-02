@@ -5,6 +5,10 @@ import Film from '../pages/Film'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Error from '../components/misc/Error'
+import People from '../pages/People'
+import Species from '../pages/Species'
+import Locations from '../pages/Locations'
+import Vehicles from '../pages/Vehicles'
 
 const Wrapper = styled.div`
   height: 100vh;
@@ -52,6 +56,18 @@ function App() {
             </Route>
             <Route path="/film/:filmId">
               <Film />
+            </Route>
+            <Route path="/people">
+              <People />
+            </Route>
+            <Route path="/species">
+              <Species />
+            </Route>
+            <Route path="/locations">
+              <Locations />
+            </Route>
+            <Route path="/vehicles">
+              <Vehicles />
             </Route>
             <Route>
               <Error />

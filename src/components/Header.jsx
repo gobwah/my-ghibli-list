@@ -8,15 +8,16 @@ const Container = styled.header`
   height: 10vh;
   flex-shrink = 0;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
+  margin: 1rem;
   @media (max-width: 600px) {
+    flex-direction: column;
     justify-content: center;
   }
 `
 
 const CustomLink = styled(Link)`
-  margin: 1rem;
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -35,6 +36,18 @@ const Title = styled.h1`
   margin: 0 10px;
 `
 
+const Navigation = styled.nav`
+  display: flex;
+`
+
+const NavLink = styled(Link)`
+  margin: 1rem;
+  @media (max-width: 600px) {
+    margin: 0.5rem;
+    max-height: 5vh;
+  }
+`
+
 function Header() {
   const location = useLocation()
 
@@ -50,9 +63,15 @@ function Header() {
   return (
     <Container>
       <CustomLink to="/" onClick={saveScrollPosAtOrigin}>
-        <img src={logo} alt="logo MyGhibliList" height={50} />
+        <img src={logo} alt="Logo MyGhibliList" height={50} />
         <Title>MyGhibliList</Title>
       </CustomLink>
+      <Navigation>
+        <NavLink to="/people">People</NavLink>
+        <NavLink to="/species">Species</NavLink>
+        <NavLink to="/locations">Locations</NavLink>
+        <NavLink to="/vehicles">Vehicles</NavLink>
+      </Navigation>
     </Container>
   )
 }

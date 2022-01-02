@@ -36,9 +36,11 @@ export function useFetch(url) {
   return { isLoading, data, error }
 }
 
-export function useApiSearch(from, to, id, actual = []) {
-  const { isLoading, error, data } = useFetch(url[to].getAll(`id,${from},url`))
-  const [result, setResult] = useState(actual)
+export function useApiSearch(from, to, id) {
+  const { isLoading, error, data } = useFetch(
+    url[to].getAll(`id,${from},url,name`)
+  )
+  const [result, setResult] = useState([])
 
   useEffect(() => {
     if (!from || !to || !id) {
@@ -46,15 +48,11 @@ export function useApiSearch(from, to, id, actual = []) {
     }
 
     if (data && data.length && !error && !isLoading) {
-      const filtered = data
-        .filter((elt) => elt[from].includes(url[from].getSimpleOne(id)))
-        .filter((elt) => !actual.includes(elt.url))
-
       setResult(
-        actual.concat(filtered.map((elt) => elt.url.replace('htps', 'https')))
+        data.filter((elt) => elt[from].includes(url[from].getSimpleOne(id)))
       )
     }
-  }, [actual, data, error, from, id, isLoading, to])
+  }, [data, error, from, id, isLoading, to])
 
-  return result.filter((eltUrl) => eltUrl !== url[to].getSimpleAll())
+  return result.filter((elt) => elt.url !== url[to].getSimpleAll())
 }
