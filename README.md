@@ -1,3 +1,3 @@
 # Description
 
-A React app using [https://ghibliapi.herokuapp.com/](Ghibli API) to display Ghibli films information.
+A React app using [Ghibli API](https://ghibliapi.herokuapp.com/) to display Ghibli films information.
