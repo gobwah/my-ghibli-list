@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/my-ghibli-list/static/css/main.36ce8324.css",
+    "main.js": "/my-ghibli-list/static/js/main.ce7a5da5.js",
+    "static/js/787.1d615a6c.chunk.js": "/my-ghibli-list/static/js/787.1d615a6c.chunk.js",
+    "static/media/totoro.png": "/my-ghibli-list/static/media/totoro.6dd6b73610d4fa2edf2f.png",
+    "static/media/god.png": "/my-ghibli-list/static/media/god.fe8e46c860b9fd91b45f.png",
+    "static/media/mammal.png": "/my-ghibli-list/static/media/mammal.20d793caed6b50cd7a26.png",
+    "static/media/mountain.png": "/my-ghibli-list/static/media/mountain.7daeda6aeb091c8d5dc7.png",
+    "static/media/airplane.png": "/my-ghibli-list/static/media/airplane.e91151f84ccc170e25ef.png",
+    "static/media/river.png": "/my-ghibli-list/static/media/river.e8bf0d8e8f3d5f7d0fc5.png",
+    "static/media/male.png": "/my-ghibli-list/static/media/male.2e70f81a3d80e59b1eea.png",
+    "static/media/airship.png": "/my-ghibli-list/static/media/airship.d9759106ad6a95aae0e5.png",
+    "static/media/location.png": "/my-ghibli-list/static/media/location.96f4226b0d2b958b59fa.png",
+    "static/media/dragon.png": "/my-ghibli-list/static/media/dragon.86f6ccd6fe742e52ab85.png",
+    "static/media/forest.png": "/my-ghibli-list/static/media/forest.b0f1ac6c35e0b9d94aa7.png",
+    "static/media/specy.png": "/my-ghibli-list/static/media/specy.92178081996b3b54c9a4.png",
+    "static/media/spirit.png": "/my-ghibli-list/static/media/spirit.7ee1f04f906e02bbc41e.png",
+    "static/media/neutral.png": "/my-ghibli-list/static/media/neutral.d54b5cea3dabfb92c990.png",
+    "static/media/ocean.png": "/my-ghibli-list/static/media/ocean.1bc5d824d7ee7c4e41e6.png",
+    "static/media/female.png": "/my-ghibli-list/static/media/female.7540bc201fdd077547b5.png",
+    "static/media/hill.png": "/my-ghibli-list/static/media/hill.f72aeafedb9af6b41189.png",
+    "static/media/elk.png": "/my-ghibli-list/static/media/elk.5569954825da2a5c61b1.png",
+    "static/media/github.png": "/my-ghibli-list/static/media/github.44eee0c4a6c25b0d7347.png",
+    "static/media/boat.png": "/my-ghibli-list/static/media/boat.0a2bd89d961d14c8b812.png",
+    "static/media/vehicle.png": "/my-ghibli-list/static/media/vehicle.b18c32f28b17b18d4285.png",
+    "static/media/plain.png": "/my-ghibli-list/static/media/plain.50a427f1c88d7378122c.png",
+    "static/media/logo.png": "/my-ghibli-list/static/media/logo.8dd1d31282939ba772f6.png",
+    "index.html": "/my-ghibli-list/index.html",
+    "main.36ce8324.css.map": "/my-ghibli-list/static/css/main.36ce8324.css.map",
+    "main.ce7a5da5.js.map": "/my-ghibli-list/static/js/main.ce7a5da5.js.map",
+    "787.1d615a6c.chunk.js.map": "/my-ghibli-list/static/js/787.1d615a6c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.36ce8324.css",
+    "static/js/main.ce7a5da5.js"
+  ]
+}
