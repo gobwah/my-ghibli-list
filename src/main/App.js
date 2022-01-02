@@ -2,9 +2,9 @@ import styled from 'styled-components'
 import Home from '../pages/Home'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Film from '../pages/Film'
-import Error from '../components/Error'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import Error from '../components/misc/Error'
 
 const Wrapper = styled.div`
   height: 100vh;

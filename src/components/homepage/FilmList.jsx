@@ -1,11 +1,11 @@
-import { useFetch } from '../utils/hooks'
+import { useFetch } from '../../utils/hooks'
 import styled from 'styled-components'
-import { getAllFilmsUrl } from '../api/ghibliApi'
+import { getAllFilmsUrl } from '../../api/ghibliApi'
 import FilmCard from './FilmCard'
-import Loader from './Loader'
-import Error from './Error'
+import Loader from '../misc/Loader'
 import { useState } from 'react'
-import colors from '../utils/colors'
+import colors from '../../utils/colors'
+import Error from '../misc/Error'
 
 const Wrapper = styled.div`
   padding: 0;

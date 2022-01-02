@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import totoro from '../assets/totoro.png'
+import totoro from '../../assets/totoro.png'
 
 const ErrorContainer = styled.div`
   display: flex;

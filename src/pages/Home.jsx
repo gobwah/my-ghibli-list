@@ -1,5 +1,5 @@
-import FilmList from '../components/FilmList'
 import { useEffect, useState } from 'react'
+import FilmList from '../components/homepage/FilmList'
 
 function Home() {
   const [scroll, setScroll] = useState(0)

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import colors from '../utils/colors'
+import colors from '../../utils/colors'
 
 const { default: styled } = require('styled-components')
 
