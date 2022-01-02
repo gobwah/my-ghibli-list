@@ -43,7 +43,7 @@ const Main = styled.main`
 function App() {
   return (
     <Wrapper>
-      <Router className="App">
+      <Router className="App" basename="/my-ghibli-list">
         <Header />
         <Main id="main">
           <Switch>
