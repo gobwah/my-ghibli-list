@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import colors from '../utils/colors'
 import { useLocation } from 'react-router-dom'
+import { useRouteMatch } from 'react-router-dom/cjs/react-router-dom.min'
 
 const Container = styled.header`
   height: 10vh;
@@ -50,6 +51,8 @@ const NavLink = styled(Link)`
 
 function Header() {
   const location = useLocation()
+  let match = useRouteMatch()
+  console.log(match)
 
   function saveScrollPosAtOrigin() {
     if (location.pathname === '/') {

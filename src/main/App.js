@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import Home from '../pages/Home'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { HashRouter as Router, Route, Switch } from 'react-router-dom'
 import Film from '../pages/Film'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
@@ -43,7 +43,7 @@ const Main = styled.main`
 function App() {
   return (
     <Wrapper>
-      <Router className="App" basename="/my-ghibli-list">
+      <Router className="App">
         <Header />
         <Main id="main">
           <Switch>
