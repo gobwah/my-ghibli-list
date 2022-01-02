@@ -7,7 +7,16 @@ const Wrapper = styled.section`
 `
 
 function PeopleSection({ people }) {
-  return (
+  let anyPeople
+  if (people.length === 1) {
+    let url = people[0]
+    url = url.substring(url.lastIndexOf('/'))
+    anyPeople = url.length !== 1
+  } else {
+    anyPeople = true
+  }
+
+  return anyPeople ? (
     <Wrapper>
       <h3>Characters</h3>
       <CardCarousel>
@@ -16,7 +25,7 @@ function PeopleSection({ people }) {
         ))}
       </CardCarousel>
     </Wrapper>
-  )
+  ) : null
 }
 
 export default PeopleSection
