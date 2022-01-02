@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/my-ghibli-list/static/css/main.36ce8324.css",
-    "main.js": "/my-ghibli-list/static/js/main.142627da.js",
+    "main.js": "/my-ghibli-list/static/js/main.c4121c08.js",
     "static/js/787.1d615a6c.chunk.js": "/my-ghibli-list/static/js/787.1d615a6c.chunk.js",
     "static/media/totoro.png": "/my-ghibli-list/static/media/totoro.6dd6b73610d4fa2edf2f.png",
     "static/media/god.png": "/my-ghibli-list/static/media/god.fe8e46c860b9fd91b45f.png",
@@ -28,11 +28,11 @@
     "static/media/logo.png": "/my-ghibli-list/static/media/logo.8dd1d31282939ba772f6.png",
     "index.html": "/my-ghibli-list/index.html",
     "main.36ce8324.css.map": "/my-ghibli-list/static/css/main.36ce8324.css.map",
-    "main.142627da.js.map": "/my-ghibli-list/static/js/main.142627da.js.map",
+    "main.c4121c08.js.map": "/my-ghibli-list/static/js/main.c4121c08.js.map",
     "787.1d615a6c.chunk.js.map": "/my-ghibli-list/static/js/787.1d615a6c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.36ce8324.css",
-    "static/js/main.142627da.js"
+    "static/js/main.c4121c08.js"
   ]
 }
