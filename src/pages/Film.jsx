@@ -6,10 +6,7 @@ import Loader from '../components/misc/Loader'
 import Error from '../components/misc/Error'
 import FilmTitle from '../components/film/FilmTitle'
 import FilmDescription from '../components/film/FilmDescription'
-import PeopleSection from '../components/film/PeopleSection'
-import SpeciesSection from '../components/film/SpeciesSection'
-import LocationsSection from '../components/film/LocationsSection'
-import VehiclesSection from '../components/film/VehiclesSection'
+import Section from '../components/film/Section'
 
 const Wrapper = styled.section`
   display: flex;
@@ -31,10 +28,10 @@ function Film() {
     <Wrapper>
       <FilmTitle data={data} />
       <FilmDescription data={data} />
-      <PeopleSection people={data.people} filmId={filmId} />
-      <SpeciesSection species={data.species} filmId={filmId} />
-      <LocationsSection locations={data.locations} filmId={filmId} />
-      <VehiclesSection vehicles={data.vehicles} filmId={filmId} />
+      <Section array={data.people} filmId={filmId} type="people" />
+      <Section array={data.species} filmId={filmId} type="species" />
+      <Section array={data.locations} filmId={filmId} type="locations" />
+      <Section array={data.vehicles} filmId={filmId} type="vehicles" />
     </Wrapper>
   )
 }
