@@ -9,7 +9,6 @@ import Error from '../misc/Error'
 
 const Wrapper = styled.div`
   padding: 0;
-  margin: 0 1vw;
   text-align: center;
 `
 
@@ -34,7 +33,6 @@ const Filter = styled.input`
 
 const List = styled.section`
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
   align-items: center;
 `
@@ -53,7 +51,6 @@ function FilmList() {
     <Wrapper>
       <Filter
         type="text"
-        autoFocus
         value={filter}
         onChange={(e) => setFilter(e.target.value)}
       />

@@ -6,7 +6,6 @@ const ErrorContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 80vh;
 `
 
 function Error() {

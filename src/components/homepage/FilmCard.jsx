@@ -3,14 +3,37 @@ import colors from '../../utils/colors'
 
 const { default: styled } = require('styled-components')
 
+const ratio = 900 / 600
+
 const Card = styled.article`
-  width: 13rem;
-  height: 20rem;
+  height: ${(100 * ratio) / 6}vw;
+  width: 16.66%;
+
+  @media (max-width: 1200px) {
+    height: ${(100 * ratio) / 5}vw;
+    width: 20%;
+  }
+  @media (max-width: 1000px) {
+    height: ${(100 * ratio) / 4}vw;
+    width: 25%;
+  }
+  @media (max-width: 800px) {
+    height: ${(100 * ratio) / 3}vw;
+    width: 33.33%;
+  }
+  @media (max-width: 600px) {
+    height: ${(100 * ratio) / 2}vw;
+    width: 50%;
+  }
+  @media (max-width: 400px) {
+    height: ${100 * ratio}vw;
+    width: 100%;
+  }
   background-image: ${(props) => `url(${props.img})`};
   background-repeat: no-repeat;
   background-position: center;
   background-size: 105%;
-  transition: background-size 500ms;
+  transition: background-size 750ms;
 
   &:hover a {
     opacity: 1;

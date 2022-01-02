@@ -14,7 +14,7 @@ function Section({ filmId, type }) {
   return result.length && result[0] !== url[type].getSimpleAll() ? (
     <Wrapper>
       <h3 style={{ textTransform: 'capitalize' }}>
-        {type} <sub>{result.length}</sub>
+        {type} <sub>({result.length})</sub>
       </h3>
       <CardCarousel>
         {result.map((elt, index) => (

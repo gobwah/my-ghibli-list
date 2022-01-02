@@ -54,7 +54,6 @@ function ListPage({ type }) {
     <Wrapper>
       <Filter
         type="text"
-        autoFocus
         value={filter}
         onChange={(e) => setFilter(e.target.value)}
       />

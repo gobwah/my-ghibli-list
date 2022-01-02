@@ -19,25 +19,21 @@ const Wrapper = styled.div`
 `
 
 const Main = styled.main`
-  flex-grow: 1;
-  flex-shrink: 1;
-  overflow: auto;
+  @media (min-width: 600px) {
+    flex-grow: 1;
+    flex-shrink: 1;
+    overflow: auto;
 
-  &::-webkit-scrollbar {
-    @media (min-width: 600px) {
+    &::-webkit-scrollbar {
       width: 10px;
     }
-  }
 
-  &::-webkit-scrollbar-track {
-    @media (min-width: 600px) {
+    &::-webkit-scrollbar-track {
       background: #15171b;
       border-radius: 20px;
     }
-  }
 
-  &::-webkit-scrollbar-thumb {
-    @media (min-width: 600px) {
+    &::-webkit-scrollbar-thumb {
       background-color: #079dec;
       border-radius: 20px;
     }
