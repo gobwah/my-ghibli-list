@@ -1,7 +1,5 @@
 import styled from 'styled-components'
-import male from '../../assets/male.png'
-import female from '../../assets/female.png'
-import neutral from '../../assets/neutral.png'
+import specy from '../../assets/specy.png'
 import { useFetch } from '../../utils/hooks'
 import Loader from '../../components/misc/Loader'
 
@@ -32,26 +30,19 @@ const Image = styled.img`
   }
 `
 
-function CharacterCard({ url }) {
+function SpecyCard({ url }) {
   const { isLoading, error, data } = useFetch(url)
 
   return isLoading ? (
     <Loader />
-  ) : (
+  ) : error ? (
+    <Image src={specy} alt="Not Found" />
+  ) : data.name ? (
     <Card>
-      <Image
-        src={
-          data.gender === 'Male'
-            ? male
-            : data.gender === 'Female'
-            ? female
-            : neutral
-        }
-        alt={error ? 'Not found' : data.gender}
-      />
-      <h2>{error ? 'Not found' : data.name}</h2>
+      <Image src={specy} alt="Specy" />
+      <h2>{data.name}</h2>
     </Card>
-  )
+  ) : null
 }
 
-export default CharacterCard
+export default SpecyCard

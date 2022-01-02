@@ -1,4 +1,6 @@
 import styled from 'styled-components'
+import { url } from '../../api/ghibliApi'
+import { useApiSearch } from '../../utils/hooks'
 import CardCarousel from '../misc/CardCarousel'
 import CharacterCard from './CharacterCard'
 
@@ -6,21 +8,16 @@ const Wrapper = styled.section`
   width: 80%;
 `
 
-function PeopleSection({ people }) {
-  let anyPeople
-  if (people.length === 1) {
-    let url = people[0]
-    url = url.substring(url.lastIndexOf('/'))
-    anyPeople = url.length !== 1
-  } else {
-    anyPeople = true
-  }
+function PeopleSection({ filmId, people }) {
+  const result = useApiSearch('films', 'people', filmId, people)
 
-  return anyPeople ? (
+  return result.length && result[0] !== url.people.getSimpleAll() ? (
     <Wrapper>
-      <h3>Characters</h3>
+      <h3>
+        Characters <sub>{result.length}</sub>
+      </h3>
       <CardCarousel>
-        {people.map((character, index) => (
+        {result.map((character, index) => (
           <CharacterCard key={`character-${index}`} url={character} />
         ))}
       </CardCarousel>

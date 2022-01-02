@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { url } from '../api/ghibliApi'
 
 export function useFetch(url) {
   const [data, setData] = useState({})
@@ -33,4 +34,27 @@ export function useFetch(url) {
   }, [url])
 
   return { isLoading, data, error }
+}
+
+export function useApiSearch(from, to, id, actual = []) {
+  const { isLoading, error, data } = useFetch(url[to].getAll(`id,${from},url`))
+  const [result, setResult] = useState(actual)
+
+  useEffect(() => {
+    if (!from || !to || !id) {
+      return
+    }
+
+    if (data && data.length && !error && !isLoading) {
+      const filtered = data
+        .filter((elt) => elt[from].includes(url[from].getSimpleOne(id)))
+        .filter((elt) => !actual.includes(elt.url))
+
+      setResult(
+        actual.concat(filtered.map((elt) => elt.url.replace('htps', 'https')))
+      )
+    }
+  }, [actual, data, error, from, id, isLoading, to])
+
+  return result.filter((eltUrl) => eltUrl !== url[to].getSimpleAll())
 }

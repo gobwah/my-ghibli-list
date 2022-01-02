@@ -1,6 +1,6 @@
 import { useFetch } from '../../utils/hooks'
 import styled from 'styled-components'
-import { getAllFilmsUrl } from '../../api/ghibliApi'
+import { url } from '../../api/ghibliApi'
 import FilmCard from './FilmCard'
 import Loader from '../misc/Loader'
 import { useState } from 'react'
@@ -40,7 +40,9 @@ const List = styled.section`
 `
 
 function FilmList() {
-  const { isLoading, data, error } = useFetch(getAllFilmsUrl('id,title,image'))
+  const { isLoading, data, error } = useFetch(
+    url.films.getAll('id,title,image')
+  )
   const [filter, setFilter] = useState('')
 
   return isLoading ? (

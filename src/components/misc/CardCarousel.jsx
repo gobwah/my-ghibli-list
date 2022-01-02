@@ -67,7 +67,10 @@ function scrollCallback(e) {
 
 function CardCarousel({ children }) {
   return (
-    <Container className="max-scroll-left" onScroll={scrollCallback}>
+    <Container
+      className={children.length > 3 ? LEFT : `${RIGHT} ${LEFT}`}
+      onScroll={scrollCallback}
+    >
       {children}
     </Container>
   )
