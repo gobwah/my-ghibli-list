@@ -1,6 +1,6 @@
 import { Wrapper } from './FilmBanner.styles'
 
-const FilmTitle = ({ data }) => {
+const FilmBanner = ({ data }) => {
   return (
     <Wrapper img={data.movie_banner}>
       <div className="banner"></div>
@@ -15,4 +15,4 @@ const FilmTitle = ({ data }) => {
   )
 }
 
-export default FilmTitle
+export default FilmBanner

@@ -3,22 +3,22 @@ import styled from 'styled-components'
 
 export const Wrapper = styled.div`
   padding: 0;
+  margin: 0;
   text-align: center;
 
   input {
-    margin: 1rem;
+    margin: 10px 0;
     padding: 5px 1rem;
     border: 1px black solid;
     border-radius: 5% / 50%;
     font-size: 2rem;
+    max-width: 50%;
+    min-width: 30%;
+    outline: white 2px solid;
 
     @media (max-width: 600px) {
       font-size: 1.5rem;
     }
-
-    max-width: 50%;
-    min-width: 30%;
-    outline: ${colors.secondary} 1px solid;
 
     &:focus {
       border: ${colors.primary} 1px solid;
@@ -29,6 +29,5 @@ export const Wrapper = styled.div`
   section {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
   }
 `

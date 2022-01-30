@@ -20,8 +20,14 @@ export const CustomLink = styled(Link)`
   display: flex;
   align-items: center;
   text-decoration: none;
+
   @media (max-width: 600) {
     justify-content: center;
+  }
+
+  img {
+    max-height: 10vh;
+    object-fit: scale-down;
   }
 
   h1 {

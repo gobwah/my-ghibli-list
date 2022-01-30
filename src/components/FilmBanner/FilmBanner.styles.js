@@ -4,7 +4,7 @@ const HEIGHT = 25
 const MARGIN = 2.5
 const UNIT = 'vh'
 
-export const Wrapper = styled.section`
+export const Wrapper = styled.div`
   width: 100%;
   height: ${HEIGHT + 2 * MARGIN + UNIT};
 

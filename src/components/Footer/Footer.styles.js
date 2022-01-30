@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Wrapper = styled.footer`
-  height: 10vh;
+  height: 7.5vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -18,8 +18,8 @@ export const Wrapper = styled.footer`
     }
 
     img {
-      width: 2rem;
-      height: 2rem;
+      max-height: 4vh;
+      object-fit: contain;
     }
   }
 `

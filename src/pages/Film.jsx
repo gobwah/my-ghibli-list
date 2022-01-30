@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom'
 import { useFetch } from '../utils/hooks'
 import Loader from '../components/misc/Loader'
 import Error from '../components/misc/Error'
-import FilmTitle from '../components/FilmBanner/FilmBanner'
+import FilmBanner from '../components/FilmBanner/FilmBanner'
 import FilmDescription from '../components/FilmDescription/FilmDescription'
 import { Wrapper } from './Film.styles'
 
@@ -18,7 +18,7 @@ const Film = () => {
     <Error />
   ) : (
     <Wrapper>
-      <FilmTitle data={data} />
+      <FilmBanner data={data} />
       <FilmDescription data={data} />
     </Wrapper>
   )
