@@ -48,7 +48,7 @@ export const links = [
   },
 ]
 
-export function getImage(type, elt) {
+export const getImage = (type, elt) => {
   switch (type) {
     case 'people':
       return getPeopleImg(elt)
@@ -66,7 +66,7 @@ export function getImage(type, elt) {
   }
 }
 
-function getPeopleImg(elt) {
+const getPeopleImg = (elt) => {
   switch (elt.gender) {
     case 'Male':
       return male
@@ -79,7 +79,7 @@ function getPeopleImg(elt) {
   }
 }
 
-function getSpeciesImg(elt) {
+const getSpeciesImg = (elt) => {
   switch (elt.classification) {
     case 'Mammal':
       return mammal
@@ -101,7 +101,7 @@ function getSpeciesImg(elt) {
   }
 }
 
-function getLocationsImg(elt) {
+const getLocationsImg = (elt) => {
   switch (elt.terrain) {
     case 'Hill':
       return hill
@@ -132,7 +132,7 @@ function getLocationsImg(elt) {
   }
 }
 
-function getVehiclesImg(elt) {
+const getVehiclesImg = (elt) => {
   switch (elt.vehicle_class) {
     case 'Airship':
       return airship

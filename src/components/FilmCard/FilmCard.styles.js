@@ -1,11 +1,10 @@
+import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import colors from '../../utils/colors'
 
-const { default: styled } = require('styled-components')
-
 const ratio = 900 / 600
 
-const Card = styled.article`
+export const Wrapper = styled.article`
   height: ${(100 * ratio) / 6}vw;
   width: 16.66%;
 
@@ -29,6 +28,7 @@ const Card = styled.article`
     height: ${100 * ratio}vw;
     width: 100%;
   }
+
   background-image: ${(props) => `url(${props.img})`};
   background-repeat: no-repeat;
   background-position: center;
@@ -44,7 +44,7 @@ const Card = styled.article`
   }
 `
 
-const LinkWrapper = styled(Link)`
+export const LinkWrapper = styled(Link)`
   opacity: 0;
   width: 100%;
   height: 100%;
@@ -60,24 +60,12 @@ const LinkWrapper = styled(Link)`
   background-color: ${colors.applyAlpha(colors.secondary, 0.8)};
   transition: opacity 500ms;
   text-decoration: none;
+
+  span {
+    background-color: transparent;
+    font-size: 8rem;
+    color: ${colors.primary};
+    cursor: pointer;
+    user-select: none;
+  }
 `
-
-const Content = styled.span`
-  background-color: transparent;
-  font-size: 8rem;
-  color: ${colors.primary};
-  cursor: pointer;
-  user-select: none;
-`
-
-function FilmCard({ id, title, image }) {
-  return (
-    <Card img={image}>
-      <LinkWrapper title={title} to={`/film/${id}`}>
-        <Content>+</Content>
-      </LinkWrapper>
-    </Card>
-  )
-}
-
-export default FilmCard

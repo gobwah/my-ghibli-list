@@ -8,7 +8,7 @@ const ErrorContainer = styled.div`
   align-items: center;
 `
 
-function Error() {
+const Error = () => {
   return (
     <ErrorContainer>
       <h2>404.</h2>

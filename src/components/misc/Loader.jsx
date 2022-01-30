@@ -28,7 +28,7 @@ const LoaderWrapper = styled.div`
   min-height: 80vh;
 `
 
-function Loader() {
+const Loader = () => {
   return (
     <LoaderWrapper>
       <LoaderElt />
