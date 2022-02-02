@@ -5,13 +5,15 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: auto;
+  margin: 0 auto;
 
   main {
-    flex-grow: 1;
-    flex-shrink: 1;
-    display: flex;
-    justify-content: center;
-    overflow: auto;
+    @media (min-width: 600px) {
+      flex-grow: 1;
+      flex-shrink: 1;
+      display: flex;
+      justify-content: center;
+      overflow: auto;
+    }
   }
 `

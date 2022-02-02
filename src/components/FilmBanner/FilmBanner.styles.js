@@ -6,7 +6,7 @@ const UNIT = 'vh'
 
 export const Wrapper = styled.div`
   width: 100%;
-  height: ${HEIGHT + 2 * MARGIN + UNIT};
+  height: 10vh;
 
   .banner {
     background-image: ${(props) => `url(${props.img})`};
@@ -15,7 +15,7 @@ export const Wrapper = styled.div`
     background-position: center;
     filter: blur(10px) opacity(90%) grayscale(50%);
     height: ${HEIGHT + UNIT};
-    margin: ${MARGIN + UNIT} auto;
+    margin: 0 auto;
 
     @media (max-width: 600px) {
       background-size: 200%;
