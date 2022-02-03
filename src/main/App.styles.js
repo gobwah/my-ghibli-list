@@ -6,6 +6,8 @@ export const Wrapper = styled.div`
   flex-direction: column;
 
   main {
+    justify-content: center;
+
     @media (min-width: 600px) and (min-height: 400px) {
       display: flex;
       overflow: auto;
