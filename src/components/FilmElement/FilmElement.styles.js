@@ -20,8 +20,8 @@ export const Wrapper = styled.section`
       flex-direction: column;
       justify-content: flex-start;
       align-items: center;
-      width: 25%;
-      height: 150px;
+      width: 30%;
+      height: 175px;
 
       @media (max-width: 600px), (max-height: 400px) {
         height: 125px;
