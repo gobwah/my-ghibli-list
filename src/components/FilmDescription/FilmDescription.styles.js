@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Wrapper = styled.div`
-  margin: 5vh 10vw;
+  margin: 50px;
   display: flex;
   justify-content: center;
 
@@ -12,6 +12,10 @@ export const Wrapper = styled.div`
 
   aside > img {
     height: 40vh;
+
+    @media (max-height: 400px) {
+      height: 80vh;
+    }
   }
 
   article {

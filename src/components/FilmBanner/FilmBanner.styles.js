@@ -1,21 +1,23 @@
 import styled from 'styled-components'
 
-const HEIGHT = 25
-const MARGIN = 2.5
-const UNIT = 'vh'
-
 export const Wrapper = styled.div`
   width: 100%;
-  height: 10vh;
+  height: 20vh;
+  margin-top: 20px;
 
-  .banner {
+  @media (max-height: 400px) {
+    height: 40vh;
+  }
+
+  div {
+    height: 100%;
+    margin: 0 auto;
+
     background-image: ${(props) => `url(${props.img})`};
-    background-size: 150%;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     filter: blur(10px) opacity(90%) grayscale(50%);
-    height: ${HEIGHT + UNIT};
-    margin: 0 auto;
 
     @media (max-width: 600px) {
       background-size: 200%;
@@ -23,16 +25,23 @@ export const Wrapper = styled.div`
   }
 
   h2 {
-    text-align: center;
     position: relative;
-    top: -${HEIGHT + 2 * MARGIN + UNIT};
-    background: transparent;
-    font-size: 1.5rem;
-    height: ${HEIGHT + 2 * MARGIN + UNIT};
-    margin: ${MARGIN + UNIT} 0;
+    top: -20vh;
+    margin: 0;
+    padding: 0;
+    height: 20vh;
+
+    @media (max-height: 400px) {
+      top: -40vh;
+      height: 40vh;
+    }
+
     display: flex;
     justify-content: center;
     align-items: center;
+    background: transparent;
+    text-align: center;
+    font-size: 1.5rem;
 
     @media (max-width: 600px) {
       font-size: 1.25rem;

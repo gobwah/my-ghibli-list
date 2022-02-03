@@ -4,30 +4,29 @@ import colors from '../../utils/colors'
 
 export const Wrapper = styled.header`
     height: 10vh;
-    flex-shrink = 0;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: flex-start;
     margin: 1rem;
+    flex-shrink = 0;
 
-    @media (max-width: 600px) {
-    flex-direction: column;
-    justify-content: center;
+    @media (max-width: 600px), (max-height: 400px) {
+      justify-content: center;
     }
 `
 
 export const CustomLink = styled(Link)`
   display: flex;
+  justify-content: center;
   align-items: center;
   text-decoration: none;
-
-  @media (max-width: 600) {
-    justify-content: center;
-  }
 
   img {
     max-height: 10vh;
     object-fit: scale-down;
+
+    @media (max-height: 400px) {
+      max-height: 15vh;
+    }
   }
 
   h1 {

@@ -8,6 +8,10 @@ export const Wrapper = styled.footer`
   flex-shrink: 0;
   margin: 0 10px;
 
+  @media (max-height: 400px) {
+    height: 15vh;
+  }
+
   div {
     display: flex;
     justify-content: space-between;
@@ -20,6 +24,10 @@ export const Wrapper = styled.footer`
     img {
       max-height: 4vh;
       object-fit: contain;
+
+      @media (max-height: 400px) {
+        max-height: 10vh;
+      }
     }
   }
 `
