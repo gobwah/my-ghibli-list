@@ -21,7 +21,7 @@ const FilmElement = ({ filmId, type, image }) => {
           )
           .sort((elt1, elt2) => elt1.name.localeCompare(elt2.name, 'en'))
           .map((elt) => (
-            <div key={type}>
+            <div key={elt.id}>
               <img src={image} alt={type} />
               <h3>{elt.name}</h3>
             </div>
