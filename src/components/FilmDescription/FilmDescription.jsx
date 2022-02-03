@@ -13,21 +13,29 @@ const FilmDescription = ({ data }) => {
         </div>
         <div className="metadata">
           <p>
-            <b>Director{data.director.includes(',') ? 's' : ''}:</b>{' '}
+            <b>{`Director${data.director.includes(',') ? 's' : ''}:`}</b>
+            <br />
             {data.director}
           </p>
           <p>
-            <b>Producer{data.producer.includes(',') ? 's' : ''}:</b>{' '}
+            <b>{`Producer${data.producer.includes(',') ? 's' : ''}:`}</b>
+            <br />
             {data.producer}
           </p>
           <p>
-            <b>Release date:</b> {data.release_date}
+            <b>Release date:</b>
+            <br />
+            {data.release_date}
           </p>
           <p>
-            <b>Release date:</b> {data.running_time}min
+            <b>Release date:</b>
+            <br />
+            {data.running_time}min
           </p>
           <p>
-            <b>Score:</b> {data.rt_score}/100
+            <b>Score:</b>
+            <br />
+            {data.rt_score}/100
           </p>
         </div>
       </article>

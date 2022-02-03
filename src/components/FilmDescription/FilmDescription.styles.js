@@ -4,6 +4,7 @@ export const Wrapper = styled.div`
   margin: 50px;
   display: flex;
   justify-content: center;
+  max-width: 80%;
 
   @media (max-width: 600px) {
     flex-direction: column;
@@ -19,6 +20,9 @@ export const Wrapper = styled.div`
   }
 
   article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     margin: 0 25px;
 
     .synopsis {
