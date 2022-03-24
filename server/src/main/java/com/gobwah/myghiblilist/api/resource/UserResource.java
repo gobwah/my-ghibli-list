@@ -36,10 +36,10 @@ public class UserResource {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<User> getUser(@PathVariable("id") Long id) {
+    public ResponseEntity<User> getUser(@PathVariable("id") final Long id) {
         try {
-            return ResponseEntity.ok().body(userService.getUser(id));
-        } catch (UserNotFoundException e) {
+            return ResponseEntity.ok().body(userService.getUserById(id));
+        } catch (final UserNotFoundException e) {
             return ResponseEntity.notFound().build();
         }
     }

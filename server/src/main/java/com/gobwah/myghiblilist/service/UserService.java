@@ -13,15 +13,15 @@ public interface UserService {
 
     public User saveUser(@NonNull final User user);
 
-    public void addRoleToUser(final String username, final String roleName)
-            throws UserNotFoundException, RoleNotFoundException;
-
-    public User getUser(final String username) throws UserNotFoundException;
-
-    public Collection<User> getUsers();
-
     public Role saveRole(@NonNull final Role role);
 
-    public User getUser(final Long id) throws UserNotFoundException;
+    public void addRoleToUser(final String login, final String roleName)
+            throws UserNotFoundException, RoleNotFoundException;
+
+    public User getUserById(final Long id) throws UserNotFoundException;
+
+    public User getUserByLogin(final String login) throws UserNotFoundException;
+
+    public Collection<User> getUsers();
 
 }

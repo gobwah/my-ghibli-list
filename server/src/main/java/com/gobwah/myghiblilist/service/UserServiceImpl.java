@@ -46,7 +46,7 @@ public class UserServiceImpl implements UserService, UserDetailsService {
             throw new UsernameNotFoundException("Can not load a user from blank username");
         }
 
-        final User user = userRepo.findByUsername(username);
+        final User user = userRepo.findByLogin(username);
         if (user == null) {
             final String message = "User " + username + " not found";
             log.error(message);
@@ -75,11 +75,11 @@ public class UserServiceImpl implements UserService, UserDetailsService {
     }
 
     @Override
-    public void addRoleToUser(final String username, final String roleName)
+    public void addRoleToUser(final String login, final String roleName)
             throws UserNotFoundException, RoleNotFoundException {
-        final User user = userRepo.findByUsername(username);
+        final User user = userRepo.findByLogin(login);
         if (user == null) {
-            throw new UserNotFoundException(String.format("User '%s' not found", username));
+            throw new UserNotFoundException(String.format("User '%s' not found", login));
         }
 
         final Role role = roleRepo.findByName(roleName);
@@ -87,34 +87,34 @@ public class UserServiceImpl implements UserService, UserDetailsService {
             throw new RoleNotFoundException(String.format("Role '%s' not found", roleName));
         }
 
-        log.info("Adding role {} to user {}", roleName, username);
+        log.info("Adding role {} to user {}", roleName, login);
         user.getRoles().add(role);
     }
 
     @Override
-    public User getUser(final String username) throws UserNotFoundException {
-        log.info("Fetching user '{}'", username);
-        final User user = userRepo.findByUsername(username);
+    public User getUserByLogin(final String login) throws UserNotFoundException {
+        log.info("Fetching user '{}'", login);
+        final User user = userRepo.findByLogin(login);
         if (user == null) {
-            throw new UserNotFoundException(String.format("User '%s' not found", username));
+            throw new UserNotFoundException(String.format("User '%s' not found", login));
         }
         return user;
+    }
+
+    @Override
+    public User getUserById(final Long id) throws UserNotFoundException {
+        log.info("Fetching user '{}'", id);
+        try {
+            return userRepo.getById(id);
+        } catch (final EntityNotFoundException e) {
+            throw new UserNotFoundException(String.format("User '%l' not found", id));
+        }
     }
 
     @Override
     public Collection<User> getUsers() {
         log.info("Fetching all users");
         return userRepo.findAll();
-    }
-
-    @Override
-    public User getUser(final Long id) throws UserNotFoundException {
-        log.info("Fetching user '{}'", id);
-        try {
-            return userRepo.getById(id);
-        } catch (EntityNotFoundException e) {
-            throw new UserNotFoundException(String.format("User '%l' not found", id));
-        }
     }
 
 }

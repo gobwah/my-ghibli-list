@@ -13,7 +13,6 @@ import javax.persistence.ManyToMany;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.NonNull;
 
 @Entity
 @Data
@@ -26,7 +25,6 @@ public class User {
     private Long id;
     private String firstname;
     private String lastname;
-    @NonNull
     private String login;
     private String password;
     @ManyToMany(fetch = FetchType.EAGER)
