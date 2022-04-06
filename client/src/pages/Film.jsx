@@ -17,11 +17,9 @@ const Film = () => {
     `https://ghibliapi.herokuapp.com/films/${filmId}`
   )
 
-  return isLoading ? (
-    <Loader />
-  ) : error ? (
-    <Error />
-  ) : (
+  if (isLoading) return <Loader />
+  if (error) return <Error />
+  return (
     <Wrapper>
       <FilmBanner data={data} />
       <FilmDescription data={data} />

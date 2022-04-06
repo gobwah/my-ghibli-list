@@ -1,8 +1,5 @@
 package com.gobwah.myghiblilist.api.dto;
 
-import java.util.ArrayList;
-import java.util.Collection;
-
 import com.gobwah.myghiblilist.domain.User;
 
 import org.springframework.security.crypto.password.PasswordEncoder;
