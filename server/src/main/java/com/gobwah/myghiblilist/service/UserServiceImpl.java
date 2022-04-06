@@ -2,6 +2,7 @@ package com.gobwah.myghiblilist.service;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Optional;
 
 import javax.persistence.EntityNotFoundException;
 
@@ -75,11 +76,11 @@ public class UserServiceImpl implements UserService, UserDetailsService {
     }
 
     @Override
-    public void addRoleToUser(final String login, final String roleName)
+    public void addRoleToUser(final long id, final String roleName)
             throws UserNotFoundException, RoleNotFoundException {
-        final User user = userRepo.findByLogin(login);
-        if (user == null) {
-            throw new UserNotFoundException(String.format("User '%s' not found", login));
+        final Optional<User> user = userRepo.findById(id);
+        if (user.isEmpty()) {
+            throw new UserNotFoundException(String.format("User '%l' not found", id));
         }
 
         final Role role = roleRepo.findByName(roleName);
@@ -87,8 +88,8 @@ public class UserServiceImpl implements UserService, UserDetailsService {
             throw new RoleNotFoundException(String.format("Role '%s' not found", roleName));
         }
 
-        log.info("Adding role {} to user {}", roleName, login);
-        user.getRoles().add(role);
+        log.info("Adding role {} to user {}", roleName, id);
+        user.get().getRoles().add(role);
     }
 
     @Override

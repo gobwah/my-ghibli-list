@@ -3,13 +3,17 @@ package com.gobwah.myghiblilist.api.resource;
 import java.net.URI;
 import java.util.Collection;
 
-import com.gobwah.myghiblilist.api.dto.UserDto;
+import com.gobwah.myghiblilist.api.dto.UserForm;
+import com.gobwah.myghiblilist.domain.Role;
 import com.gobwah.myghiblilist.domain.User;
+import com.gobwah.myghiblilist.exception.RoleNotFoundException;
 import com.gobwah.myghiblilist.exception.UserNotFoundException;
 import com.gobwah.myghiblilist.service.UserService;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -29,6 +33,8 @@ public class UserResource {
 
     @Autowired
     private final UserService userService;
+    @Autowired
+    private final PasswordEncoder passwordEncoder;
 
     @GetMapping
     public ResponseEntity<Collection<User>> getUsers() {
@@ -45,9 +51,17 @@ public class UserResource {
     }
 
     @PostMapping
-    public ResponseEntity<User> saveUser(@RequestBody final UserDto userDto) {
+    public ResponseEntity<User> saveUser(@RequestBody final UserForm userForm) {
         final URI uri = URI.create(ServletUriComponentsBuilder.fromCurrentContextPath().path(BASE_ROUTE).toUriString());
-        return ResponseEntity.created(uri).body(userService.saveUser(userDto.toUser()));
+        final User user = userService.saveUser(userForm.toUser(passwordEncoder));
+        try {
+            userService.addRoleToUser(user.getId(), Role.ROLE_USER);
+        } catch (UserNotFoundException e) {
+            return ResponseEntity.badRequest().build();
+        } catch (RoleNotFoundException e) {
+            return ResponseEntity.status(HttpStatus.BAD_GATEWAY).build();
+        }
+        return ResponseEntity.created(uri).body(user);
     }
 
 }

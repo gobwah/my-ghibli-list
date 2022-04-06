@@ -15,7 +15,7 @@ public interface UserService {
 
     public Role saveRole(@NonNull final Role role);
 
-    public void addRoleToUser(final String login, final String roleName)
+    public void addRoleToUser(final long id, final String roleName)
             throws UserNotFoundException, RoleNotFoundException;
 
     public User getUserById(final Long id) throws UserNotFoundException;

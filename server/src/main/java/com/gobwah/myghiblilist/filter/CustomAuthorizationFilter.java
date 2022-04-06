@@ -7,6 +7,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.gobwah.myghiblilist.api.resource.TokenResource;
 import com.gobwah.myghiblilist.utils.JwtUtils;
 import com.gobwah.myghiblilist.utils.ResponseUtils;
 
@@ -25,7 +26,7 @@ public class CustomAuthorizationFilter extends OncePerRequestFilter {
             final FilterChain filterChain)
             throws ServletException, IOException {
         if (request.getServletPath().equals("/login")
-                || request.getServletPath().equals("/token/refresh/**")) {
+                || request.getServletPath().equals(TokenResource.BASE_ROUTE + "**")) {
             filterChain.doFilter(request, response);
         } else {
             final String authorizationHeader = request.getHeader(HttpHeaders.AUTHORIZATION);

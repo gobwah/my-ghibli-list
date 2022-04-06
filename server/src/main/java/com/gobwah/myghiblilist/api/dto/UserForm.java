@@ -5,28 +5,26 @@ import java.util.Collection;
 
 import com.gobwah.myghiblilist.domain.User;
 
+import org.springframework.security.crypto.password.PasswordEncoder;
+
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
-public class UserDto {
+public class UserForm {
 
-    private Long id;
     private String firstname;
     private String lastname;
     private String login;
     private String password;
-    private Collection<RoleDto> roles = new ArrayList<>();
 
-    public User toUser() {
+    public User toUser(PasswordEncoder passwordEncoder) {
         final User user = new User();
-        user.setId(id);
         user.setFirstname(firstname);
         user.setLastname(lastname);
         user.setLogin(login);
-        user.setPassword(password);
-        roles.stream().map(RoleDto::toRole).forEach(role -> user.getRoles().add(role));
+        user.setPassword(passwordEncoder.encode(password));
         return user;
     }
 

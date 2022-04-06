@@ -1,5 +1,7 @@
 package com.gobwah.myghiblilist.security;
 
+import com.gobwah.myghiblilist.api.resource.TokenResource;
+import com.gobwah.myghiblilist.api.resource.UserResource;
 import com.gobwah.myghiblilist.filter.CustomAuthenticationFilter;
 import com.gobwah.myghiblilist.filter.CustomAuthorizationFilter;
 
@@ -43,11 +45,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
         http.authorizeHttpRequests().antMatchers(HttpMethod.POST, "/login/**")
                 .permitAll();
-        http.authorizeHttpRequests().antMatchers(HttpMethod.GET, "/token/refresh").permitAll();
-        http.authorizeHttpRequests().antMatchers(HttpMethod.GET, "/users/**")
+        http.authorizeHttpRequests().antMatchers(HttpMethod.GET, "/login/**")
+                .denyAll();
+        http.authorizeHttpRequests().antMatchers(HttpMethod.POST, UserResource.BASE_ROUTE + "/**")
+                .permitAll();
+        http.authorizeHttpRequests().antMatchers(HttpMethod.GET, TokenResource.BASE_ROUTE + "/**")
+                .permitAll();
+        http.authorizeHttpRequests().antMatchers(HttpMethod.GET, UserResource.BASE_ROUTE + "/**")
                 .hasAnyAuthority("ROLE_USER");
-        http.authorizeHttpRequests().antMatchers(HttpMethod.POST, "/users/**")
-                .hasAnyAuthority("ROLE_ADMIN");
         http.addFilter(authConfig);
         http.addFilterBefore(new CustomAuthorizationFilter(), UsernamePasswordAuthenticationFilter.class);
     }
