@@ -1,1 +1,1 @@
-# Go to global README.md
+# See global README.md

@@ -98,10 +98,10 @@ A React app using Ghibli API to display Ghibli films information. The name is in
 
 ### Built With
 
-|||
-|-|-|
-| [React](https://reactjs.org/) | <img src="https://avatars.githubusercontent.com/u/6412038?s=280&v=4" alt="React logo" width="50" height="50"/> |
-| [React Router](https://reactrouter.com/) | <img src="https://pics.freeicons.io/uploads/icons/png/9267873881551942642-512.png" alt="React Router logo" width="50" height="50"/> |
+|                                                     |                                                                                                                                             |
+| --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| [React](https://reactjs.org/)                       | <img src="https://avatars.githubusercontent.com/u/6412038?s=280&v=4" alt="React logo" width="50" height="50"/>                              |
+| [React Router](https://reactrouter.com/)            | <img src="https://pics.freeicons.io/uploads/icons/png/9267873881551942642-512.png" alt="React Router logo" width="50" height="50"/>         |
 | [Styled Components](https://styled-components.com/) | <img src="https://raw.githubusercontent.com/styled-components/brand/master/styled-components.png" alt="Redux logo" width="50" height="50"/> |
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -112,21 +112,21 @@ A React app using Ghibli API to display Ghibli films information. The name is in
 
 ### Prerequisites
 
--   npm
-    ```sh
-    npm install npm@latest -g
-    ```
+- npm
+  ```sh
+  npm install npm@latest -g
+  ```
 
 ### Installation
 
 1. Clone the repo
-    ```sh
-    git clone https://github.com/gobwah/my-ghibli-list.git
-    ```
+   ```sh
+   git clone https://github.com/gobwah/my-ghibli-list.git
+   ```
 2. Install dependencies
-    ```sh
-    npm install
-    ```
+   ```sh
+   npm install
+   ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -169,7 +169,7 @@ Project Link: [https://github.com/gobwah/my-ghibli-list](https://github.com/gobw
 
 ## Acknowledgments
 
--  []()
+- []()
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -178,20 +178,14 @@ Project Link: [https://github.com/gobwah/my-ghibli-list](https://github.com/gobw
 
 [contributors-shield]: https://img.shields.io/github/contributors/gobwah/my-ghibli-list.svg?style=for-the-badge
 [contributors-url]: https://github.com/gobwah/my-ghibli-list/graphs/contributors
-
 [forks-shield]: https://img.shields.io/github/forks/gobwah/my-ghibli-list.svg?style=for-the-badge
 [forks-url]: https://github.com/gobwah/my-ghibli-list/network/members
-
 [stars-shield]: https://img.shields.io/github/stars/gobwah/my-ghibli-list.svg?style=for-the-badge
 [stars-url]: https://github.com/gobwah/my-ghibli-list/stargazers
-
 [issues-shield]: https://img.shields.io/github/issues/gobwah/my-ghibli-list.svg?style=for-the-badge
 [issues-url]: https://github.com/gobwah/my-ghibli-list/issues
-
 [license-shield]: https://img.shields.io/github/license/gobwah/my-ghibli-list.svg?style=for-the-badge
 [license-url]: https://github.com/gobwah/my-ghibli-list/blob/master/LICENSE.txt
-
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/vincent-dellalibera
-
 [product-screenshot]: public/screenshot.jpg
