@@ -1,7 +1,9 @@
-import React from 'react'
+import Wrapper from '../../components/Wrapper/Wrapper'
 
-const MoviePage = () => {
-  return <div>MoviePage</div>
-}
+const MoviePage = () => (
+  <Wrapper>
+    <h1>MoviePage</h1>
+  </Wrapper>
+)
 
 export default MoviePage

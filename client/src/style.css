@@ -1,15 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
 @tailwind base;
-
-/* Your own custom base styles */
-
-/* Start purging... */
 @tailwind components;
-/* Stop purging. */
-
-/* Your own custom component styles */
-
-/* Start purging... */
 @tailwind utilities;
-/* Stop purging. */
 
-/* Your own custom utilities */
+* {
+  scroll-behavior: smooth;
+  color: white;
+  @apply font-poppins;
+}
+
+body {
+  @apply mx-1 ss:mx-10 my-3 bg-secondary;
+}
+
+.bg-secondary-gradient {
+  background: linear-gradient(
+    141deg,
+    rgba(67, 78, 99, 1) 0%,
+    rgba(40, 44, 52, 1) 100%
+  );
+}
