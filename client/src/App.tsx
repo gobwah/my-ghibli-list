@@ -1,12 +1,7 @@
-import Loader from './components/misc/Loader'
+import HomePage from './pages/HomePage/HomePage'
 
 function App() {
-  return (
-    <div className="flex flex-col justify-center items-center h-[100vh]">
-      <p>Hello</p>
-      <Loader />
-    </div>
-  )
+  return <HomePage />
 }
 
 export default App
