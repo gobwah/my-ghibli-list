@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { CgClose } from 'react-icons/cg'
 
-import logo from '../../assets/logo.png'
+import { images } from '../../constants/images'
 
 const links = ['home', 'movies']
 
@@ -56,7 +56,7 @@ const Header = () => {
     <header className="flex justify-between items-center w-full">
       <a href="/" className="flex justify-start items-center gap-1">
         <div className="w-16 sm:w-20">
-          <img src={logo} alt="Logo" />
+          <img src={images.logo} alt="Logo" />
         </div>
         <h1 className="text-xl sm:text-3xl font-bold">MyGhibliList</h1>
       </a>
