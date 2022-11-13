@@ -9,11 +9,8 @@ const links = ['home', 'movies']
 const Navbar = () => {
   const [toggle, setToggle] = useState(false)
   return (
-    <nav>
-      <div
-        className="sm:hidden mr-3"
-        onClick={() => setToggle((prev) => !prev)}
-      >
+    <nav className="flex justify-center items-center">
+      <div className="sm:hidden" onClick={() => setToggle((prev) => !prev)}>
         {toggle ? <CgClose size={25} /> : <GiHamburgerMenu size={25} />}
       </div>
 

@@ -11,7 +11,7 @@
 }
 
 body {
-  @apply mx-1 ss:mx-10 my-3 bg-secondary;
+  @apply bg-secondary;
 }
 
 .bg-secondary-gradient {
