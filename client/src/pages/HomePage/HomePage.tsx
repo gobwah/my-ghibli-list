@@ -4,6 +4,7 @@ import Footer from '../../components/Footer/Footer'
 import Header from '../../components/Header/Header'
 import Hero from '../../components/Hero/Hero'
 import Loader from '../../components/Loader/Loader'
+import Separator from '../../components/Separator/Separator'
 import { images } from '../../constants/images'
 
 const HomePage = () => {
@@ -25,7 +26,9 @@ const HomePage = () => {
       {loaded ? (
         <div className="absolute top-0 right-0 left-0 bottom-0 flex flex-col justify-start items-center p-3">
           <Header />
+          <Separator />
           <Hero />
+          <Separator />
           <Footer />
         </div>
       ) : (
