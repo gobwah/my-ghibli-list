@@ -3,8 +3,12 @@ import { GiHamburgerMenu } from 'react-icons/gi'
 import { CgClose } from 'react-icons/cg'
 
 import { images } from '../../constants/images'
+import { Link } from 'react-router-dom'
 
-const links = ['home', 'movies']
+const links = [
+  { text: 'home', route: '/' },
+  { text: 'movies', route: '/movies' },
+]
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false)
@@ -27,9 +31,9 @@ const Navbar = () => {
                 index === links.length - 1 ? 'mb-0' : 'mb-4'
               }`}
             >
-              <a className="uppercase" href={`/`}>
-                {link}
-              </a>
+              <Link to={link.route} className="uppercase">
+                {link.text}
+              </Link>
             </li>
           ))}
         </ul>
@@ -39,11 +43,11 @@ const Navbar = () => {
         {links.map((link, index) => (
           <li
             key={`${link}-${index}`}
-            className="font-normal cursor-pointer text-white"
+            className="font-normal cursor-pointer text-white hover:text-primary"
           >
-            <a className="bg uppercase" href={`/`}>
-              {link}
-            </a>
+            <Link to={link.route} className="uppercase">
+              {link.text}
+            </Link>
           </li>
         ))}
       </ul>
@@ -54,12 +58,12 @@ const Navbar = () => {
 const Header = () => {
   return (
     <header className="flex justify-between items-center w-full">
-      <a href="/" className="flex justify-start items-center gap-1">
+      <Link to={'/'} className="flex justify-start items-center gap-1">
         <div className="w-16 sm:w-20">
           <img src={images.logo} alt="Logo" />
         </div>
         <h1 className="text-xl sm:text-3xl font-bold">MyGhibliList</h1>
-      </a>
+      </Link>
       <Navbar />
     </header>
   )

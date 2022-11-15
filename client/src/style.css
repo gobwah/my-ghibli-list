@@ -21,3 +21,7 @@ body {
     rgba(40, 44, 52, 1) 100%
   );
 }
+
+video {
+  object-fit: 'cover';
+}
