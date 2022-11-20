@@ -1,7 +1,7 @@
 import { images } from '../../constants/images'
 import { Link } from 'react-router-dom'
-import { Navbar } from '../Navbar/Navbar'
 import Separator from '../Separator/Separator'
+import { Navbar } from './Navbar'
 
 const Header = () => {
   return (
