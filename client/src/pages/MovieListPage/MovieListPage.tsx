@@ -13,7 +13,7 @@ const MovieListPage = () => {
   const [filter, setFilter] = useState('')
 
   if (error) {
-    return <ErrorPage />
+    return <ErrorPage customText="An error occured" />
   }
 
   if (!data) {

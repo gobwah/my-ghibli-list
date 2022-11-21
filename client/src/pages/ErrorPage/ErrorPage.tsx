@@ -4,7 +4,7 @@ import totoro from '../../assets/totoro.png'
 import Footer from '../../components/Footer/Footer'
 import Header from '../../components/Header/Header'
 
-export default function ErrorPage() {
+export default function ErrorPage({ customText = '' }) {
   const error: any = useRouteError()
 
   return (
@@ -14,7 +14,9 @@ export default function ErrorPage() {
         <section className="flex flex-col justify-start items-center sm:items-start">
           <h2 className="font-semibold text-8xl font-poppins">404.</h2>
           <p className="font-poppins text-2xl m-3 text-center sm:text-left sm:m-0 sm:my-2">
-            You might have lost yourself... Go back{' '}
+            {`${customText ? customText : 'You might have lost yourself...'}`}
+            <br />
+            Go back{' '}
             <a href="/" className="decoration-solid underline">
               home
             </a>
