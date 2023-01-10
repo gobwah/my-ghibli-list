@@ -1,4 +1,6 @@
 import { useParams } from 'react-router-dom'
+import MovieHero from '../../components/MovieHero/MovieHero'
+import MovieTitle from '../../components/MovieTitle/MovieTitle'
 import Wrapper from '../../components/Wrapper/Wrapper'
 import { useFetch } from '../../constants/hooks'
 import { links } from '../../constants/links'
@@ -25,27 +27,18 @@ const MoviePage = () => {
   return (
     <Wrapper>
       <main className="relative w-full">
-        <section className="w-full">
-          <img
-            src={data.movie_banner}
-            alt={data.title}
-            className="w-full h-full object-cover blur-sm"
-          />
-        </section>
+        <MovieTitle
+          title={data.title}
+          original_title={data.original_title}
+          original_title_romanised={data.original_title_romanised}
+        />
 
-        <section className="absolute top-0 right-0 bottom-0 left-0">
-          <ul className="text-xl font-bold list-none flex flex-col justify-center items-center">
-            <li>
-              <h2>{data.title}</h2>
-            </li>
-            <li>
-              <h2>{data.original_title}</h2>
-            </li>
-            <li>
-              <h2>{data.original_title_romanised}</h2>
-            </li>
-          </ul>
-        </section>
+        <MovieHero
+          img={{ src: data.movie_banner, alt: data.title }}
+          release_date={data.release_date}
+          rt_score={data.rt_score}
+          running_time={data.running_time}
+        />
       </main>
     </Wrapper>
   )

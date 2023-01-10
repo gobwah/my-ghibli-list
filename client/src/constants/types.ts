@@ -8,9 +8,9 @@ export type GhibliMovie = {
   description: string
   director: string
   producer: string
-  release_date: string
-  running_time: string
-  rt_score: string
+  release_date: number
+  running_time: number
+  rt_score: number
   people: string[]
   species: string[]
   locations: string[]
