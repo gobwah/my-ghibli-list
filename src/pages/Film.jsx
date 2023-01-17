@@ -14,7 +14,7 @@ import vehicle from '../assets/vehicle.png'
 const Film = () => {
   const { filmId } = useParams()
   const { isLoading, error, data } = useFetch(
-    `https://ghibliapi.herokuapp.com/films/${filmId}`
+    `https://ghibliapi-gobwah.herokuapp.com/films/${filmId}`
   )
 
   return isLoading ? (

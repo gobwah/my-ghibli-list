@@ -19,7 +19,7 @@ const Footer = () => {
           ))}
       </div>
       <a
-        href="https://ghibliapi.herokuapp.com/"
+        href="https://ghibliapi-gobwah.herokuapp.com/"
         target="_blank"
         rel="noreferrer"
       >

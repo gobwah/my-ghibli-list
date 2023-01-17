@@ -7,7 +7,7 @@ import { Wrapper } from './Films.styles'
 
 const Films = () => {
   const { isLoading, data, error } = useFetch(
-    `https://ghibliapi.herokuapp.com/films?limit=250&fields=id,title,image`
+    `https://ghibliapi-gobwah.herokuapp.com/films?limit=250&fields=id,title,image`
   )
   const [filter, setFilter] = useState('')
 

@@ -4,7 +4,7 @@ import { Wrapper } from './FilmElement.styles'
 
 const FilmElement = ({ filmId, type, image }) => {
   const { data, isLoading, error } = useFetch(
-    `https://ghibliapi.herokuapp.com/${type}?limit=250`
+    `https://ghibliapi-gobwah.herokuapp.com/${type}?limit=250`
   )
 
   return isLoading ? (
@@ -16,7 +16,7 @@ const FilmElement = ({ filmId, type, image }) => {
         {data
           .filter((elt) =>
             elt.films.includes(
-              `https://ghibliapi.herokuapp.com/films/${filmId}`
+              `https://ghibliapi-gobwah.herokuapp.com/films/${filmId}`
             )
           )
           .sort((elt1, elt2) => elt1.name.localeCompare(elt2.name, 'en'))
