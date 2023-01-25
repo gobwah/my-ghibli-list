@@ -12,7 +12,7 @@ const MovieTitle = ({
 	original_title_romanised,
 }: MovieTitleProps) => {
 	return (
-		<div className='flex justify-center items-center my-5'>
+		<section className='flex justify-center items-center my-5'>
 			<ul className='text-xl md:text-3xl font-bold list-none flex flex-col justify-center items-center'>
 				<li>
 					<h2>{title}</h2>
@@ -24,7 +24,7 @@ const MovieTitle = ({
 					<h2>{original_title_romanised}</h2>
 				</li>
 			</ul>
-		</div>
+		</section>
 	);
 };
 

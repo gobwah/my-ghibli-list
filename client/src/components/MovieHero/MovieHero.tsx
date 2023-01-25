@@ -38,7 +38,7 @@ const MovieHero = ({
 	}, [imgLoaded]);
 
 	return (
-		<div className='relative w-full'>
+		<section className='relative w-full'>
 			<CustomImage
 				src={img.src}
 				alt={img.alt}
@@ -72,7 +72,7 @@ const MovieHero = ({
 			) : (
 				<Loader />
 			)}
-		</div>
+		</section>
 	);
 };
 

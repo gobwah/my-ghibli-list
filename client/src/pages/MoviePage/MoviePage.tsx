@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import MovieHero from "../../components/MovieHero/MovieHero";
-import MovieImage from "../../components/MovieImage/MovieImage";
+import MovieMeta from "../../components/MovieMeta/MovieMeta";
 import MovieTitle from "../../components/MovieTitle/MovieTitle";
 import Wrapper from "../../components/Wrapper/Wrapper";
 import { useFetch } from "../../constants/hooks";
@@ -39,7 +39,12 @@ const MoviePage = () => {
 					running_time={data.running_time}
 				/>
 
-				<MovieImage src={data.image} alt={data.title} />
+				<MovieMeta
+					img={{ src: data.image, alt: data.title }}
+					director={data.director}
+					producer={data.producer}
+					description={data.description}
+				/>
 			</main>
 		</Wrapper>
 	);
