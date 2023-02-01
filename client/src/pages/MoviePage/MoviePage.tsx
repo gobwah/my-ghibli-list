@@ -1,7 +1,9 @@
 import { useParams } from "react-router-dom";
 import MovieHero from "../../components/MovieHero/MovieHero";
+import MovieLinks from "../../components/MovieLinks/MovieLinks";
 import MovieMeta from "../../components/MovieMeta/MovieMeta";
 import MovieTitle from "../../components/MovieTitle/MovieTitle";
+import Separator from "../../components/Separator/Separator";
 import Wrapper from "../../components/Wrapper/Wrapper";
 import { useFetch } from "../../constants/hooks";
 import { links } from "../../constants/links";
@@ -12,7 +14,7 @@ import LoadingPage from "../LoadingPage/LoadingPage";
 const MoviePage = () => {
 	const { movieId } = useParams();
 	const { data, error } = useFetch<GhibliMovie>(
-		`${links.ghibliApi}/films/${movieId}`
+		`${links.api}/films/${movieId}`
 	);
 
 	if (error) {
@@ -44,6 +46,17 @@ const MoviePage = () => {
 					director={data.director}
 					producer={data.producer}
 					description={data.description}
+				/>
+
+				<div className='w-full flex justify-center items-center'>
+					<Separator />
+				</div>
+
+				<MovieLinks
+					locationUrls={data.locations}
+					peopleUrls={data.people}
+					specieUrls={data.species}
+					vehicleUrls={data.vehicles}
 				/>
 			</main>
 		</Wrapper>

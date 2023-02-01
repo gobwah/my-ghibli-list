@@ -51,7 +51,7 @@ const Footer = () => {
 				</p>
 
 				<a
-					href={links.ghibliApi}
+					href={links.api}
 					target='_blank'
 					rel='noreferrer'
 					className='text-xs flex items-center'

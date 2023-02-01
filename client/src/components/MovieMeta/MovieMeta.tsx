@@ -21,10 +21,10 @@ const MovieMeta = ({
 
 	const handleLoaded = useCallback(() => {
 		setImgLoaded(true);
-	}, [imgLoaded]);
+	}, []);
 
 	return (
-		<section className='flex flex-col sm:flex-row sm:gap-5 sm:mx-3 justify-center items-center sm:items-start my-5'>
+		<section className='flex flex-col sm:flex-row sm:gap-5 sm:mx-3 justify-center items-center sm:items-stretch my-5'>
 			{/* <MovieImage src={img.src} alt={img.alt} /> */}
 
 			<CustomImage
@@ -35,7 +35,8 @@ const MovieMeta = ({
 				imgClass='w-5/6 sm:w-1/4'
 			/>
 
-			<div className='flex flex-col justify-center sm:justify-around items-center mx-5 sm:mx-0'>
+			{/* <div className='flex flex-col justify-center sm:justify-around items-center mx-5 sm:mx-0'> */}
+			<div className='flex flex-col sm:gap-16 sm:pt-5'>
 				<ul className='my-5 sm:flex sm:justify-around sm:w-full'>
 					{[
 						{ key: "Director", value: director },
@@ -53,7 +54,7 @@ const MovieMeta = ({
 					))}
 				</ul>
 
-				<article className='flex flex-col justify-start align-middle gap-2'>
+				<article className='flex flex-col justify-start items-start gap-2'>
 					<h3 className='text-base md:text-xl font-semibold'>Synopsis</h3>
 					<p className='text-xs md:text-base px-2'>{description}</p>
 				</article>

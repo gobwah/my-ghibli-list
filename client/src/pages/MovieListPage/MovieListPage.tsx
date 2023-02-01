@@ -9,7 +9,7 @@ import LoadingPage from "../LoadingPage/LoadingPage";
 import ErrorPage from "../ErrorPage/ErrorPage";
 
 const MovieListPage = () => {
-	const { data, error } = useFetch<GhibliMovie[]>(links.ghibliApi + "/films");
+	const { data, error } = useFetch<GhibliMovie[]>(links.api + "/films");
 	const [filter, setFilter] = useState("");
 
 	if (error) {
