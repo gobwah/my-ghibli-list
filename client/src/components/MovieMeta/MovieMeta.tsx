@@ -25,8 +25,6 @@ const MovieMeta = ({
 
 	return (
 		<section className='flex flex-col sm:flex-row sm:gap-5 sm:mx-3 justify-center items-center sm:items-stretch my-5'>
-			{/* <MovieImage src={img.src} alt={img.alt} /> */}
-
 			<CustomImage
 				src={img.src}
 				alt={img.alt}
@@ -35,7 +33,6 @@ const MovieMeta = ({
 				imgClass='w-5/6 sm:w-1/4'
 			/>
 
-			{/* <div className='flex flex-col justify-center sm:justify-around items-center mx-5 sm:mx-0'> */}
 			<div className='flex flex-col sm:gap-16 sm:pt-5'>
 				<ul className='my-5 sm:flex sm:justify-around sm:w-full'>
 					{[

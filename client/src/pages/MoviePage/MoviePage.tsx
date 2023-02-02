@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useParams } from "react-router-dom";
 import MovieHero from "../../components/MovieHero/MovieHero";
 import MovieLinks from "../../components/MovieLinks/MovieLinks";
@@ -22,6 +23,33 @@ const MoviePage = () => {
 	}
 
 	if (!data) {
+		return <LoadingPage />;
+	}
+
+	return <MoviePageWrapper data={data} />;
+};
+
+type MoviePageWrapperProps = {
+	data: GhibliMovie;
+};
+
+const MoviePageWrapper = ({ data }: MoviePageWrapperProps) => {
+	const [imageLoaded, setImageLoaded] = useState(false);
+	const [bannerLoaded, setBannerLoaded] = useState(false);
+
+	const img = new Image();
+	img.onload = () => {
+		setImageLoaded(true);
+	};
+	img.src = data.image;
+
+	const banner = new Image();
+	banner.onload = () => {
+		setBannerLoaded(true);
+	};
+	banner.src = data.movie_banner;
+
+	if (!imageLoaded || !bannerLoaded) {
 		return <LoadingPage />;
 	}
 
