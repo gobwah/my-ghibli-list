@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { BsFillPersonFill } from "react-icons/bs";
 import { useParams } from "react-router-dom";
 import Card from "../../components/Card/Card";

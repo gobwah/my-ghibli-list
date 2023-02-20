@@ -1,13 +1,12 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { AiFillCar } from "react-icons/ai";
-import { BsFillPersonFill } from "react-icons/bs";
 import { useParams } from "react-router-dom";
 import Card from "../../components/Card/Card";
 import Filter from "../../components/Filter/Filter";
 import Wrapper from "../../components/Wrapper/Wrapper";
 import { useFetch } from "../../constants/hooks";
 import { links } from "../../constants/links";
-import { GhibliCharacter, GhibliVehicle } from "../../constants/types";
+import { GhibliVehicle } from "../../constants/types";
 import ErrorPage from "../ErrorPage/ErrorPage";
 import LoadingPage from "../LoadingPage/LoadingPage";
 

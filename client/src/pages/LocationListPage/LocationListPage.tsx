@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { BsFillPersonFill } from "react-icons/bs";
+import { useState } from "react";
 import { MdLocationOn } from "react-icons/md";
 import { useParams } from "react-router-dom";
 import Card from "../../components/Card/Card";
@@ -7,7 +6,7 @@ import Filter from "../../components/Filter/Filter";
 import Wrapper from "../../components/Wrapper/Wrapper";
 import { useFetch } from "../../constants/hooks";
 import { links } from "../../constants/links";
-import { GhibliCharacter, GhibliLocation } from "../../constants/types";
+import { GhibliLocation } from "../../constants/types";
 import ErrorPage from "../ErrorPage/ErrorPage";
 import LoadingPage from "../LoadingPage/LoadingPage";
 

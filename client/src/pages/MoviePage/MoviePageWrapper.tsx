@@ -3,7 +3,6 @@ import MovieHero from "../../components/MovieHero/MovieHero";
 import MovieLinks from "../../components/MovieLinks/MovieLinks";
 import MovieMeta from "../../components/MovieMeta/MovieMeta";
 import MovieTitle from "../../components/MovieTitle/MovieTitle";
-import Separator from "../../components/Separator/Separator";
 import Wrapper from "../../components/Wrapper/Wrapper";
 import { GhibliMovie } from "../../constants/types";
 import LoadingPage from "../LoadingPage/LoadingPage";

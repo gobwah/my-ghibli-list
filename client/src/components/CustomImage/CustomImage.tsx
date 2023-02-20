@@ -1,5 +1,3 @@
-import React from "react";
-
 type CustomImageProps = {
 	src: string;
 	alt: string;

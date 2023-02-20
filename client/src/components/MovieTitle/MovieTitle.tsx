@@ -1,5 +1,3 @@
-import React from "react";
-
 type MovieTitleProps = {
 	title: string;
 	original_title: string;

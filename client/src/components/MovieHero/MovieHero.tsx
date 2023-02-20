@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from "react";
+import { useCallback, useState } from "react";
 import { AiFillCalendar } from "react-icons/ai";
 import CustomImage from "../CustomImage/CustomImage";
 import Loader from "../Loader/Loader";

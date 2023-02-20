@@ -1,5 +1,4 @@
 import { useFetch } from "../../constants/hooks";
-import Loader from "../Loader/Loader";
 import { links } from "../../constants/links";
 
 type DialogUrlFieldProps = {
