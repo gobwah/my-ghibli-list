@@ -8,6 +8,9 @@ import HomePage from "./pages/HomePage/HomePage";
 import MovieListPage from "./pages/MovieListPage/MovieListPage";
 import MoviePage from "./pages/MoviePage/MoviePage";
 import PeopleListPage from "./pages/PeopleListPage/PeopleListPage";
+import LocationListPage from "./pages/LocationListPage/LocationListPage";
+import SpecieListPage from "./pages/SpecieListPage/SpecieListPage";
+import VehicleListPage from "./pages/VehicleListPage/VehicleListPage";
 
 const router = createBrowserRouter([
 	{
@@ -28,6 +31,41 @@ const router = createBrowserRouter([
 	{
 		path: "/people",
 		element: <PeopleListPage />,
+		errorElement: <ErrorPage />,
+	},
+	{
+		path: "/people/:peopleId",
+		element: <PeopleListPage />,
+		errorElement: <ErrorPage />,
+	},
+	{
+		path: "/locations",
+		element: <LocationListPage />,
+		errorElement: <ErrorPage />,
+	},
+	{
+		path: "/locations/:locationId",
+		element: <LocationListPage />,
+		errorElement: <ErrorPage />,
+	},
+	{
+		path: "/species",
+		element: <SpecieListPage />,
+		errorElement: <ErrorPage />,
+	},
+	{
+		path: "/species/:specieId",
+		element: <SpecieListPage />,
+		errorElement: <ErrorPage />,
+	},
+	{
+		path: "/vehicles",
+		element: <VehicleListPage />,
+		errorElement: <ErrorPage />,
+	},
+	{
+		path: "/vehicles/:vehicleId",
+		element: <VehicleListPage />,
 		errorElement: <ErrorPage />,
 	},
 ]);

@@ -7,6 +7,7 @@ interface DialogProps extends React.PropsWithChildren {
 		btnPrimary: string;
 		btnSecondary?: string;
 	};
+	open: boolean;
 }
 
 export default function Dialog({
@@ -14,8 +15,9 @@ export default function Dialog({
 	modalTitle,
 	body,
 	btnTxt,
+	open,
 }: DialogProps) {
-	const [showModal, setShowModal] = useState(false);
+	const [showModal, setShowModal] = useState(open);
 
 	return (
 		<>

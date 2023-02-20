@@ -7,6 +7,9 @@ const links = [
 	{ text: "home", route: "/" },
 	{ text: "movies", route: "/movies" },
 	{ text: "people", route: "/people" },
+	{ text: "locations", route: "/locations" },
+	{ text: "species", route: "/species" },
+	{ text: "vehicles", route: "/vehicles" },
 ];
 
 export const Navbar = () => {
@@ -38,7 +41,7 @@ export const Navbar = () => {
 				</ul>
 			</div>
 
-			<ul className='hidden list-none sm:flex justify-start items-center gap-5'>
+			<ul className='hidden list-none sm:flex justify-start items-center gap-10'>
 				{links.map((link) => (
 					<li
 						key={`link-${link.text}`}
