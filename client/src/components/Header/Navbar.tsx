@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 const links = [
 	{ text: "home", route: "/" },
 	{ text: "movies", route: "/movies" },
+	{ text: "people", route: "/people" },
 ];
 
 export const Navbar = () => {

@@ -7,9 +7,12 @@ import { GhibliMovie } from "../../constants/types";
 import { links } from "../../constants/links";
 import LoadingPage from "../LoadingPage/LoadingPage";
 import ErrorPage from "../ErrorPage/ErrorPage";
+import Filter from "../../components/Filter/Filter";
 
 const MovieListPage = () => {
-	const { data, error } = useFetch<GhibliMovie[]>(links.api + "/films");
+	const { data, error } = useFetch<GhibliMovie[]>(
+		links.api + "/films?fields=id,title,image"
+	);
 	const [filter, setFilter] = useState("");
 
 	if (error) {
@@ -23,15 +26,11 @@ const MovieListPage = () => {
 	return (
 		<Wrapper>
 			<main className='flex flex-col justify-start items-center w-full'>
-				<section className='m-3 max-w-[90%] min-w-[50%]'>
-					<input
-						type='text'
-						className='bg-white border border-gray-300 text-black text-base font-poppins rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5'
-						placeholder='Search for a movie...'
-						value={filter}
-						onChange={(e) => setFilter(e.target.value)}
-					/>
-				</section>
+				<Filter
+					placeholder='Search a movie...'
+					filter={filter}
+					setFilter={setFilter}
+				/>
 
 				<section className='flex flex-col xs:flex-row flex-wrap justify-start items-center w-full'>
 					{data
