@@ -1,5 +1,5 @@
 import { useCallback, useState } from "react";
-import { useRouteError } from "react-router-dom";
+import { Link, useRouteError } from "react-router-dom";
 
 import totoro from "../../assets/totoro.png";
 import CustomImage from "../../components/CustomImage/CustomImage";
@@ -24,9 +24,9 @@ export default function ErrorPage({ customText = "" }) {
 						{`${customText ? customText : "You might have lost yourself..."}`}
 						<br />
 						Go back{" "}
-						<a href='/' className='decoration-solid underline'>
+						<Link to='/' className='decoration-solid underline'>
 							home
-						</a>
+						</Link>
 						?
 					</p>
 					{error && (

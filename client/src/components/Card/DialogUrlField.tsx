@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useFetch } from "../../constants/hooks";
 import { links } from "../../constants/links";
 
@@ -17,11 +18,11 @@ export const DialogUrlField = ({ url }: DialogUrlFieldProps) => {
 	type = type === "films" ? "movies" : type;
 
 	return (
-		<a
+		<Link
 			className='text-xs underline sm:hover:text-primary'
-			href={`/${type}/${data.id}`}
+			to={`/${type}/${data.id}`}
 		>
 			{data.name || data.title}
-		</a>
+		</Link>
 	);
 };

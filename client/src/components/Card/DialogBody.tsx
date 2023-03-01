@@ -2,7 +2,7 @@ import { useFetch } from "../../constants/hooks";
 import ErrorElement from "../ErrorElement/ErrorElement";
 import Loader from "../Loader/Loader";
 import { links } from "../../constants/links";
-import { DialogUrlField } from "./DialogUrlFieldProps";
+import { DialogUrlField } from "./DialogUrlField";
 
 type DialogBodyProps = {
 	url: string;
