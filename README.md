@@ -42,7 +42,7 @@ A React app using Ghibli API to display Ghibli films information
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://gobwah.github.io/my-ghibli-list">
+  <a href="https://my-ghibli-list-gobwah.vercel.app">
     <img src="public/logo.png" alt="Logo" width="80" height="80">
   </a>
 
