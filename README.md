@@ -43,24 +43,132 @@ A React app using Ghibli API to display Ghibli films information
 <br />
 <div align="center">
   <a href="https://gobwah.github.io/my-ghibli-list">
-    <img src="client/public/logo.png" alt="Logo" width="80" height="80">
+    <img src="public/logo.png" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">MyGhibliList</h3>
 
   <p align="center">
-    A simple website using Ghibli API to display Ghibli films information.
+    A React app using Ghibli API to display Ghibli films information.
     <br />
+    <a href="https://github.com/gobwah/my-ghibli-list"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://gobwah.github.io/my-ghibli-list">View Demo</a>
+    ·
+    <a href="https://github.com/gobwah/my-ghibli-list/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/gobwah/my-ghibli-list/issues">Request Feature</a>
+  </p>
 </div>
 
-# Structure
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li>
+        <a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ol>
+</details>
 
-Please go to the dedicated structure section `README.md` to get more information about the project.
+<!-- ABOUT THE PROJECT -->
 
-|                                                                       |                                                                                                                   |
-| --------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| [Client](https://github.com/gobwah/my-ghibli-list/tree/master/client) | <img src="https://cdn-icons-png.flaticon.com/512/2933/2933245.png" alt="Typescript logo" width="50" height="50"/> |
-| [Server (comming soon...)](https://github.com/gobwah/my-ghibli-list/) | <img src="https://cdn-icons-png.flaticon.com/512/3208/3208726.png" alt="Typescript logo" width="50" height="50"/> |
+## About The Project
+
+[![MyGhibliList Screen Shot][product-screenshot]](https://gobwah.github.io/my-ghibli-list)
+
+A React app using Ghibli API to display Ghibli films information. The name is inspired from [MyAnimeList](https://myanimelist.net/). This is the client-side application.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### Built With
+
+|                                                           |                                                                                                                                                                                                                                                                                                  |
+| --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [Typescript](https://react-icons.github.io/react-icons/)  | <img src="https://cdn-icons-png.flaticon.com/512/5968/5968381.png" alt="Typescript logo" width="50" height="50"/>                                                                                                                                                                                |
+| [React](https://reactjs.org/)                             | <img src="https://avatars.githubusercontent.com/u/6412038?s=280&v=4" alt="React logo" width="50" height="50"/>                                                                                                                                                                                   |
+| [React Router](https://reactrouter.com/)                  | <img src="https://pics.freeicons.io/uploads/icons/png/9267873881551942642-512.png" alt="React Router logo" width="50" height="50"/>                                                                                                                                                              |
+| [Tailwind](https://tailwindcss.com/)                      | <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg" alt="Tailwind logo" width="50" height="50"/>                                                                                                                                                                |
+| [React Icons](https://react-icons.github.io/react-icons/) | <img src="https://camo.githubusercontent.com/48d099290b4cb2d7937bcd96e8497cf1845b54a810a6432c70cf944b60b40c77/68747470733a2f2f7261776769742e636f6d2f676f72616e67616a69632f72656163742d69636f6e732f6d61737465722f72656163742d69636f6e732e737667" alt="React Router logo" width="50" height="50"/> |
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- GETTING STARTED -->
+
+## Getting Started
+
+### Prerequisites
+
+- npm
+  ```sh
+  npm install npm@latest -g
+  ```
+
+### Installation
+
+1. Clone the repo
+   ```sh
+   git clone https://github.com/gobwah/my-ghibli-list.git
+   ```
+2. Open `./client/`
+   ```sh
+   cd ./client/
+   ```
+3. Install dependencies
+   ```sh
+   npm install
+   ```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTRIBUTING -->
+
+## Contributing
+
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+Don't forget to give the project a star! Thanks again!
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LICENSE -->
+
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTACT -->
+
+## Contact
+
+Vincent DELLA-LIBERA - [@vincent-dellalibera](https://linkedin.com/in/vincent-dellalibera) - vincent.dellalibera@gmail.com
+
+Project Link: [https://github.com/gobwah/my-ghibli-list](https://github.com/gobwah/my-ghibli-list)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -87,4 +195,4 @@ Please go to the dedicated structure section `README.md` to get more information
 [license-url]: https://github.com/gobwah/my-ghibli-list/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/vincent-dellalibera
-[product-screenshot]: client/public/screenshot.png
+[product-screenshot]: public/screenshot.png
