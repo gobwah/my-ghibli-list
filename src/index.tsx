@@ -70,7 +70,6 @@ const router = createBrowserRouter(
 			errorElement: <ErrorPage />,
 		},
 	],
-	{ basename: "/my-ghibli-list" }
 );
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
