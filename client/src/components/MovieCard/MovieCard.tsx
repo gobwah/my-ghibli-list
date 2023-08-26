@@ -14,7 +14,7 @@ const MovieCard = ({ movie }: MovieCardProps) => {
 
 	const handleLoaded = useCallback(() => {
 		setImgLoaded(true);
-	}, [imgLoaded]);
+	}, []);
 
 	return (
 		<article

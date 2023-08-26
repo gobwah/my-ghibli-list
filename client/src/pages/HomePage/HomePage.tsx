@@ -12,7 +12,7 @@ const HomePage = () => {
 
 	const handleLoaded = useCallback(() => {
 		setImgLoaded(true);
-	}, [imgLoaded]);
+	}, []);
 
 	return (
 		<>

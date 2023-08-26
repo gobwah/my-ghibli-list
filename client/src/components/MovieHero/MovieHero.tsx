@@ -35,7 +35,7 @@ const MovieHero = ({
 
 	const handleLoaded = useCallback(() => {
 		setImgLoaded(true);
-	}, [imgLoaded]);
+	}, []);
 
 	return (
 		<section className='relative w-full'>

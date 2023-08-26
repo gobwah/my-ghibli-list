@@ -12,7 +12,7 @@ export default function ErrorPage({ customText = "" }) {
 
 	const handleLoaded = useCallback(() => {
 		setImgLoaded(true);
-	}, [imgLoaded]);
+	}, []);
 
 	return (
 		<div className='h-screen flex flex-col justify-start items-center p-3'>
