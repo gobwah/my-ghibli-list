@@ -30,7 +30,7 @@
 
 TAGS
 
-https://gobwah.github.io/my-ghibli-list
+https://my-ghibli-list-gobwah.vercel.app
 public/icon.png
 gobwah
 my-ghibli-list
@@ -54,7 +54,7 @@ A React app using Ghibli API to display Ghibli films information
     <a href="https://github.com/gobwah/my-ghibli-list"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://gobwah.github.io/my-ghibli-list">View Demo</a>
+    <a href="https://my-ghibli-list-gobwah.vercel.app">View Demo</a>
     ·
     <a href="https://github.com/gobwah/my-ghibli-list/issues">Report Bug</a>
     ·
@@ -91,7 +91,7 @@ A React app using Ghibli API to display Ghibli films information
 
 ## About The Project
 
-[![MyGhibliList Screen Shot][product-screenshot]](https://gobwah.github.io/my-ghibli-list)
+[![MyGhibliList Screen Shot][product-screenshot]](https://my-ghibli-list-gobwah.vercel.app)
 
 A React app using Ghibli API to display Ghibli films information. The name is inspired from [MyAnimeList](https://myanimelist.net/). This is the client-side application.
 
