@@ -24,7 +24,7 @@ export default function ErrorPage({ customText = "" }) {
 						{`${customText ? customText : "You might have lost yourself..."}`}
 						<br />
 						Go back{" "}
-						<Link to='/' className='decoration-solid underline'>
+						<Link to='/client/public' className='decoration-solid underline'>
 							home
 						</Link>
 						?
